@@ -10,4 +10,17 @@ def clean_file(fileID):
         return []
 
 
+def count_word(words):
+    word_count = {}
+    for word in words:
+        if word:
+            word_count[word] = word_count.get(word, 0) + 1
+    return word_count
+
+
+
+
+
+
 print(clean_file('inputfile.txt'))
+print(count_word(clean_file('inputfile.txt')))
