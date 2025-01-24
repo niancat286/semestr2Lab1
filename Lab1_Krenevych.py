@@ -24,8 +24,11 @@ def sort_by_freq(word_count):
         print(f"{word}: {count}")
 
 
+if __name__ == "__main__":
+    fileID = input("Введіть імʼя файлу з текстом: ")
 
-#print(clean_file('inputfile.txt'))
-#print(count_word(clean_file('inputfile.txt')))
+    words = clean_file(fileID)
+    if words:
+        word_count = count_word(words)
+        sort_by_freq(word_count)
 
-sort_by_freq(count_word(clean_file('inputfile.txt')))
