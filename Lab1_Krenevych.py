@@ -18,9 +18,14 @@ def count_word(words):
     return word_count
 
 
+def sort_by_freq(word_count):
+    sorted_words = sorted(word_count.items(), key=lambda x: x[1], reverse=True)
+    for word, count in sorted_words:
+        print(f"{word}: {count}")
 
 
 
+#print(clean_file('inputfile.txt'))
+#print(count_word(clean_file('inputfile.txt')))
 
-print(clean_file('inputfile.txt'))
-print(count_word(clean_file('inputfile.txt')))
+sort_by_freq(count_word(clean_file('inputfile.txt')))
